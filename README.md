@@ -8,7 +8,9 @@ The data comes from [NASA Ames PAH IR Spectroscopic Database](https://www.astroc
 
 
 
-#### Recommend Use
+## Recommended configuration
 
-* python 3.8.*
-* tensorflow 2.12.0
+* Python == 3.10.*
+* TensorFlow == 2.13.0
+* CUDA == 11.8
+* cuDNN == 8.6.0
