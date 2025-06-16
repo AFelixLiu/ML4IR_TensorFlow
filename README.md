@@ -8,9 +8,32 @@ The data comes from [NASA Ames PAH IR Spectroscopic Database](https://www.astroc
 
 
 
+
+
 ## Recommended configuration
 
 * Python == 3.10.*
 * TensorFlow == 2.13.0
 * CUDA == 11.8
 * cuDNN == 8.6.0
+
+
+
+## Possible problems
+
+* Problem: `ValueError: None values not supported.`
+
+* Solution:
+
+  * Step 1: Comment on this line of code.
+
+    ```text
+    opt = keras.optimizers.Adam(learning_rate=0.0001, beta_1=0.9, beta_2=0.999, epsilon=None, amsgrad=False)
+    ```
+
+  * Step 2: Add this line of code below.
+
+    ```text
+    opt = keras.optimizers.Adam(learning_rate=1e-4, )
+    ```
+
